@@ -1,0 +1,30 @@
+// 
+    // Icons
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.prefix
+    margin-right:           6px
+    &.is-wider
+        margin-right:       15px
+    &.is-even-wider
+        margin-right:       24px
+
+.suffix
+    margin-left:            6px
+    &.is-wider
+        margin-left:        15px
+    &.is-even-wider
+        margin-left:        24px
+
+.icon-move-on-hover
+    .has-icon
+        svg
+            transition:     transform 0.5s ease
+    &:active, &:focus, &:hover
+        .has-icon svg
+            transform:      translateX(4px)
+
+.icon-chat
+    transform:              translateY(2px)

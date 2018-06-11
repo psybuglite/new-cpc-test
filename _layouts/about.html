@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="width-100-pc mx-auto pos-rel">
+    <img class="feature-image" src="{{ page.headline.image | prepend: site.url }}" alt="{{ page.headline.title }}">
+    <div class="about-header co-white p-2 bg-primary">
+        <h3 class="co-white m-0 py-1">
+            {{ page.headline.title }}
+        </h3>
+        <p class="nanotext">{{ page.headline.mission }}</p>
+        <p class="nanotext">{{ page.headline.vision }}</p>
+    </div>
+</div>
+<section class="maxwidth-sl mx-auto">
+    <div class="wrapper">
+            <div class="grid is-multi-col mostly-4">
+            {% assign pages = site.pages | where: 'show_on_about', 'true' %}
+            {% for page in pages %}
+                <a href="{{ page.url | prepend: site.url }}" class="icon-move-on-hover">
+                    <h3 class="microtext">{{ page.title }}</h3>
+                    <p class="nanotext co-readablegray">
+                        {{ page.summary | truncatewords: 15, '...' }} 
+                    </p>
+                    <span class="has-icon nanotext">
+                        Read More {% include tools/icons.html icon="chevron-right" %}
+                    </span>
+                </a>
+            {% endfor %}
+            </div>
+            <div class="mt-1 py-2">
+                <a href="{{ page.image | prepend: site.url }}" download><button class="btn btn-brand p-1 border prefix smalltext">Download organogram</button>{% include tools/icons.html icon="download" %}</a>
+            </div>
+    </div>
+</section>

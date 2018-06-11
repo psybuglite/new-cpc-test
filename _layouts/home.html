@@ -1,0 +1,109 @@
+---
+layout: default
+---
+<div class="maxwidth-sl mx-auto clearfix">
+    <section class="left-70 wrapper">
+        <ul class="carousel first-carousel none" data-flickity='{ "autoPlay": 6000, "adaptiveHeight": true, "contain": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true}'>
+            {% assign sorted = site.events | where_exp: "page", "page.image contains 'uploads'" %}
+            {% for post in sorted limit: 6 %}
+                <li class="carousel-cell">
+                    {% if post.image %}
+                    <img src="{{ post.image }}">
+                    {% else %}
+                    <img src="{{ site.url }}/uploads/logo.jpg">
+                    {% endif %}
+                    <a href="{{ site.url }}{{ post.url }}" class="carous">
+                    <div class="carousel-caption py-1 pos-abs">
+                        <p class="caption">{{ post.title | truncatewords: 12 }}</p>
+                    </div>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <aside class="right-30 sidebar wrapper">
+        {% for item in site.actions %}
+            <div class="take-action">
+                <h3 class="m-0 pb-1">{{ item.title }}</h3>
+                <ul class="none">
+                    {% for entry in item.subpages %}
+                    <li>
+                        <a href="{% if entry.link contains consumers %} {{ entry.link | prepend: site.url }} {% else %} {{ entry.link  }} {% endif %}">
+                            <div class="p-h boxshadow d-flx mb-h a-i-c">
+                                {% case entry.name %}
+                                    {% when 'File a Complaint' %}
+                                        {% include tools/icons.html icon="file-complaint" %}
+                                    {% when 'Leave a Review' %}
+                                        {% include tools/icons.html icon="review" %}
+                                    {% when 'Know your rights' %}
+                                        {% include tools/icons.html icon="track-complaint" %}
+                                    {% when 'Track a Complaint' %}
+                                        {% include tools/icons.html icon="rights" %}
+                                {% endcase %}
+                                <div>
+                                    <h4 class="microtext mb-hh mt-0">{{ entry.name }}</h4>
+                                    <p class="nanotext co-readablegray smalllh m-0">{{ entry.text }}</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </aside>
+</div>
+
+
+{% include components/stats.html %}
+
+
+<section class="maxwidth-sl mx-auto">
+    <div class="wrapper grid is-multi-col mostly-2">
+        <ul class="carousel none" data-flickity='{ "autoPlay": 4000, "contain": true, "prevNextButtons": true, "pageDots": false, "wrapAround": true}'>
+            {% for item in site.testimonials %}
+                <li class="carousel-cell p-2 d-flx fd-c j-c-c tx-c">
+                    <p>{{ item.text }}</p>
+                    <h4>{{ item.name }}</h4>
+                </li>
+            {% endfor %}
+        </ul>
+        {% assign sorted = site.how-tos | where: "featured", "true" %}
+        {% for item in sorted %}
+            <iframe width="100%" src="{{ item.link }}" frameborder="0">
+            </iframe>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="maxwidth-sl mx-auto">
+    <div class="wrapper">
+        <div class="d-flx al-i-c mb-2">
+            <h3 class="m-0 prefix is-even-wider">Consumer Blog</h3>
+            <a href="{{ site.url}}/blog"><span class="suffix nanotext prefix">View More {% include tools/icons.html icon="chevron-right" %}</span></a>
+        </div>
+        <div class="grid is-multi-col mostly-2">
+                {% assign sorted = site.blog | where_exp: "page", "page.image contains 'uploads'" %}
+                {% for post in sorted limit: 2 %}
+            <a href="{{ post.url | prepend: site.url }}">
+                <div class="d-flx fw-w">
+                    {% if post.image %}
+                    <img src="{{ post.image | prepend: site.url }}" class="left-50-persisted prefix is-wider blog-image" alt="">
+                    {% else %}
+                    <img src="{{ site.url }}/uploads/logo.jpg">
+                    {% endif %}
+                        <div class="microtext smalllh co-readablegray">
+                            <h3 class="m-0 smalltext">{{ post.title | truncatewords: 8 }}</h3>
+                            <p>
+                                {{ post.content | truncatewords: 20 }}
+                            </p>
+                            <span class="prefix microtext co-primary">Read More {% include tools/icons.html icon="chevron-right" %}</span>
+                        </div>
+                    </div>
+                    </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+

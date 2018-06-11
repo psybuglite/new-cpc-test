@@ -1,0 +1,17 @@
+<div class="py-2 breadcrumbs ff-sans-serif pb-h d-ifx al-i-c">
+    {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+    <a href="{{ site.url }}/" class="opacity-7-link">
+        {% include tools/icons.html icon="home" %}
+    </a>
+    {% for crumb in crumbs offset: 1 %}
+        {% if forloop.last %}
+        {% include tools/icons.html icon="chevron-right" %}
+        {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+        {% else %}
+        {% include tools/icons.html icon="chevron-right" %}
+        <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}" class="opacity-7-link">
+            {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+        </a>
+        {% endif %}
+    {% endfor %}
+</div>

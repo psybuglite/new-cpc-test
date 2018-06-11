@@ -1,0 +1,334 @@
+# Site settings
+title: Consumer Protection Council
+shortname: cpc
+legal_tag: The Council
+description: CPC is the apex consumer protection agency in Nigeria established to improve the well-being of the people.
+url: 'http://cpc.softcom.ng'
+timezone: Africa/Lagos
+
+
+# Handling Reading
+charset: 'utf-8'
+pagination:
+  enabled: true
+  permalink: '/:num/'
+  title: ':title - :num'
+  paginate_path: ":num"
+
+
+# Main navigation
+mainnav:
+  - section: Home
+    url: /
+  - section: About Us
+    url: /about/
+    pages:
+      - page: The Council
+        url: /about/council/
+      - page: What We Do
+        url: /about/what-we-do/
+      - page: Strategic Goals
+        url: /about/strategic-goals/
+      - page: Departments & Units
+        url: /about/departments/
+      - page: People
+        url: /about/people/
+      - page: Strategic Alliances
+        url: /about/alliances/
+      - page: FAQs
+        url: /faqs/
+      - page: Contact
+        url: /contact/
+  - section: Consumers
+    url: /consumers/
+    pages:
+      - page: Consumer Rights
+        url: /consumers/rights/
+      - page: Consumer Responsibilities
+        url: /consumers/responsibilities/
+      - page: Complaints Handling Procedures
+        url: /consumers/complaints-handling-procedures/
+      - page: Import Prohibition List
+        url: /consumers/import-prohibition-list
+      - page: Absolutely Prohibited Product List
+        url: /consumers/absolutely-prohibited-list/
+      - page: Testimonials
+        url: /consumers/testimonials/
+      - page: Consumer Blog
+        url: /blog/
+  - section: Businesses
+    url: /businesses/
+    pages:
+      - page: Business Obligations
+        url: /businesses/obligations/
+      - page: Sales Promotions Regulations and Guidelines
+        url: /businesses/sales-promotion-guidelines/
+      - page: Register Sales Promotion
+        url: /businesses/register-sales-promotion/
+      - page: Sales Promotion Documents
+        url: /businesses/documents/
+  - section: NGOs
+    url: /ngos/
+    pages:
+      - page: General Guidelines
+        url: /ngos/guidelines/
+      - page: Relevant Documents
+        url: /ngos/documents/
+  - section: Publications
+    url: /publications/
+    pages:
+      - page: Annual Reports
+        url: /publications/annual-reports/
+      - page: Consumer Education Materials
+        url: /publications/materials/
+      - page: Others
+        url: /publications/more
+  - section: News & Events
+    url: /news-events/
+    pages:
+      - page: Releases
+        url: /news-events/releases/
+      - page: Announcements
+        url: /news-events/announcements/
+      - page: Alert/Advisory
+        url: /news-events/alerts/
+      - page: Events
+        url: /news-events/events/
+      - page: Gallery
+        url: /gallery/
+  - section: How to...
+    url: /how-tos/
+  - section: Search
+    url: /search/
+
+
+# Actions
+actions:
+  - title:  Take Action
+    subpages:
+      - name: File a Complaint
+        link: http://user.cpc.softcom.ng/complain
+        text: Filing a complaint will help CPC to serve you better.
+      - name: Leave a Review
+        link: http://user.cpc.softcom.ng/signin
+        text: Your reviews can help businesses know how they are performing.
+      - name: Track a Complaint
+        link: http://user.cpc.softcom.ng/signin
+        text: Keep track of your complaints and account with CPC.
+      - name: Know your rights
+        link: /consumers/rights
+        text: Know your rights and responsibilities as a consumer.
+
+
+# Social media
+social_media:
+  - title:  Social
+    subpages:
+      - name: Facebook 
+        link: cpcng
+      - name: Twitter
+        link: cpcnig
+      - name: Instagram
+        link: cpcnigeria
+
+# Social media
+apps:
+  - title:  Apps
+    subpages:
+      - name: Android 
+        link: https://play.google.com/store/apps/details?id=com.softcom.cpc.android
+      - name: iOS
+        link: https://itunes.apple.com/us/app/consumer-protection-council/id1355501646?mt=8&ign-mpt=uo%3D4
+
+
+# Legal
+legal:
+  - title:  Legal
+    subpages:
+      - name: Terms of Use
+        url: /terms-of-use/
+      - name: Privacy Policy
+        url: /privacy-policy/
+      - name: Sitemap
+        url: /sitemap/
+
+
+# Headquarters
+headquarters:
+  title:    Headquarters
+  address:  No. 17 Nile Street, Maitama, Abuja.
+  phone:    0805 600 2020, 0805 600 3030
+  email:    'contact@cpc.gov.ng'
+  contact_url:   /contact/
+  head:     Babatunde Irukera
+
+
+# Build settings
+markdown: kramdown
+
+
+# Collections
+collections:
+  uploads:
+    title:  Uploads (Media & Files)
+    output: true
+  people:
+    title: Our People
+    output: true
+    permalink: /about/:collection/:name/
+  how-tos:
+    title: How-Tos
+    output: true
+    permalink: /how-tos/:collection/:name/
+  releases:
+    title: Releases
+    output: true
+  blog:
+    title: Consumer Blog
+    output: true
+  announcements:
+    title: Announcements
+    output: true
+  alerts:
+    title: Alerts & Advisory
+    output: true
+  events:
+    title: Events
+    output: true
+  gallery:
+    title: Gallery
+    output: true
+  education:
+    title: Consumer Education Materials
+    output: true
+  departments:
+    title: Departments and Units
+    output: true
+    permalink: /about/departments/:collection/:name/
+  regulators:
+    title: Regulators
+    output: true
+    permalink: /about/regulators/:collection/:name/
+  partners:
+    title: Partners
+    output: true
+    permalink: /about/partners/:collection/:name/
+  consumers:
+    title: Consumers
+    output: true
+    permalink: /consumers/:collection/:name/
+  testimonials:
+    title: Testimonials
+    output: true
+    permalink: /consumers/testimonials/:collection/:name/
+  businesses:
+    title: Businesses
+    output: true
+    permalink: /businesses/:collection/:name/
+  ngos:
+    title: Non-Governmental Organisations (NGOs)
+    output: true
+    permalink: /ngos/:collection/:name/
+  documents:
+    title: Relevant Documents
+    output: true
+    permalink: /ngos/:collection/:name/
+  publications:
+    title: Publications
+    output: true
+    permalink: /publications/:collection/:name/
+
+
+# Defaults
+defaults:
+  - scope:
+      type: blog
+    values:
+      permalink: /:collection/:year/:month/:day/:title/
+      image:
+      is_blog: true
+      layout: news-single
+  - scope:
+      type: releases
+    values:
+      permalink: /news-events/:collection/:year/:month/:day/:title/
+      image:
+      is_releases: true
+      layout: news-single
+  - scope:
+      type: announcements
+    values:
+      permalink: /news-events/:collection/:year/:month/:day/:title/
+      image:
+      is_announcements: true
+      layout: news-single
+  - scope:
+      type: alerts
+    values:
+      permalink: /news-events/:collection/:year/:month/:day/:title/
+      image:
+      is_alerts: true
+      layout: news-single
+  - scope:
+      type: events
+    values:
+      permalink: /news-events/:collection/:title/
+      event_date:
+      event_time:
+      event_summary:
+      event_venue:
+      image:
+      is_events: true
+      layout: news-single
+  - scope:
+      type: gallery
+    values:
+      permalink: /:collection/:title/
+      is_gallery: true
+  - scope:
+      type: education
+    values:
+      permalink: /:collection/:title/
+      is_gallery: true
+
+# Include folders
+include:
+  - _pages
+
+
+# Plugins
+plugins:
+  - jekyll-paginate-v2
+
+
+
+############################################################
+# Site configuration for the Auto-Pages feature
+# The values here represent the defaults if nothing is set
+autopages:
+
+  # Site-wide kill switch, disable here and it doesn't run at all 
+  enabled: true
+
+  # Collection pages, omit to disable
+  collections:
+    layouts:
+      - 'news-all.html'
+    enabled: true
+  
+
+# Handling Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+
+# Exclude from processing.
+exclude:
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .gitignore

@@ -1,0 +1,37 @@
+// 
+    // Wrappers for all Layouts
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.wrapper
+    position:                   relative
+    padding:                    $space-sm $space
+    &.will-grow
+        @media #{ $smallup }
+            padding-top:        $space-md
+            padding-bottom:     $space-md
+        @media #{ $largeup }
+            padding-top:        $space-lg
+            padding-bottom:     $space-lg
+        &.negate-top
+            padding-top:        0
+        &.negate-bottom
+            padding-bottom:     0
+        &.for-cta
+            padding-top:        3rem
+            padding-bottom:     7rem
+
+.wrapper-y
+    padding-top:                $space-sm
+    padding-bottom:             $space-sm  
+    &.will-grow
+        padding-top:            $space-md
+        padding-bottom:         $space-md
+        @media #{ $largeup }
+            padding-top:        $space-lg
+            padding-bottom:     $space-lg
+        
+.wrapper-x
+    padding-right:              $space
+    padding-left:               $space

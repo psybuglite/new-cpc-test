@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="maxwidth-sl mx-auto clearfix">
+    <section class="left-70 wrapper">
+        {% include lists/breadcrumbs.html %}
+    </section>
+</div>
+
+<div class="maxwidth-sl mx-auto clearfix">
+    <section class="left-70 wrapper">
+
+        {% for post in paginator.posts %}
+            <div class="post-group">
+                <h2 class="micro-caps co-sweetgray m-0 pb-h archive-month">
+                    {{ post.date | date: "%b %-d, %Y" }}
+                </h2>
+                <ul class="none">
+                    {% include lists/posts-list.html %}
+                </ul>
+            </div>
+        {% endfor %}
+
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | prepend: site.url }}" class="previous">Previous</a>
+            {% endif %}
+            <span class="page_number prefix suffix is-wider">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.url }}" class="next">Next</a>
+            {% endif %}
+        </div>
+    </section>
+    <aside class="right-30 sidebar wrapper">
+        {% include components/sidebar.html %}
+    </aside>
+</div>

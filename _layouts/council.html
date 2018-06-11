@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<section class="maxwidth-sl mx-auto wrapper pb-1 top-heading">
+    {% include lists/breadcrumbs.html %}
+    <h2 class="mb-1">{{ page.title }}</h2>
+</section>
+<section class="maxwidth-sl mx-auto wrapper pb-2">
+    <img class="feature-image" src="{{ page.intro.dg_image }}" alt="{{ page.intro.dg_name }}">
+    <h4 class="mb-2">{{ page.intro.dg_title }}</h4>
+    
+    <p>{{ page.intro.dg_message | markdownify }}</p>
+</section>

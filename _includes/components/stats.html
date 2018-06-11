@@ -1,0 +1,35 @@
+<section class="my-1 bg-lightgreen width-100-pc">
+    <div class="stats maxwidth-sl mx-auto fw-w grid is-multi-col mostly-4">
+        <div class="stat tx-c d-flx fd-c j-c-c a-i-c">
+            <p class="date nanotext pt-2"></p>
+            <p class="nanotext c">Consumer Protection Council</p>
+        </div>
+        <div class="stat tx-c mid-stat1">
+            <h2>12.9M+</h2>
+            <p>ALL CASES</p>
+        </div>
+        <div class="stat tx-c mid-stat2">
+            <h2>2.8M+</h2>
+            <p>OPEN CASES</p>
+        </div>
+        <div class="tx-c stat">
+            <h2>9.1M+</h2>
+            <p>RESOLVED CASES</p>
+        </div>
+    </div>
+</section>
+
+<script>
+
+    var now = new Date();
+    var options = {
+        year: 'numeric',
+        month: 'long'
+    };
+
+    var date = now.toLocaleString('en-us', options);
+    var cpcDate = document.querySelector(".date");
+
+    cpcDate.innerHTML = date;
+
+</script>

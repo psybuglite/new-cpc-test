@@ -1,0 +1,61 @@
+<nav class="desktopnav show-smallup">
+    <h3 class="sr">Desktop navigation</h3>
+    <div class="maxwidth-sl wrapper-x mx-auto">
+        <ul class="none d-flx pos-rel main-nav">
+            {% if site.mainnav[0] %}
+                {% for item in site.mainnav %} {% assign class = "" %}
+                {% if item.url == page.url %} 
+                    {% assign class = class | append: " is-active" %} 
+                {% endif %}
+                    <li class="py-1 mg-1 main-list">
+                        <a href="{{ item.url | prepend: site.url }}">
+                            {% if item.url == '/search/' %}
+                                {% include tools/icons.html icon="search" %}
+                            {% else %}
+                                {{ item.section }}
+                            {% endif %}
+                        </a>
+                        {% if item.pages[0] %}
+                            <ul class="none pos-abs sublist">
+                                {% for entry in item.pages %}
+                                    <li class="sub-list-item">
+                                        <a href="{{ entry.url | prepend: site.url }}">
+                                            <p>{{ entry.page }}</p>
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/consumers/">For Consumers</a>
+        <a href="/businesses/">For Businesses</a>
+        <a href="/ngos/">NGOs</a>
+        <a href="/how-tos/">How To...</a>
+        <a href="/publications/">Publications</a>
+        <a href="/news-events/">News and Events</a>
+        <a href="/search/">Search</a>
+    </div>
+</div>
+
+
+
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+    
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>

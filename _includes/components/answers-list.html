@@ -1,0 +1,27 @@
+<ul class="none m-0" id="search-hits">
+    {% assign answers = paginator.posts | where: 'is_answer', 'true' %}
+    {% for post in answers %}
+        <li>
+            {% assign topic_url = post.topic | slugify | prepend: '/answers/topics/' | append: '/' %}
+            {% assign topic = site.topics | where: 'url', topic_url | first %}
+            <a href="{{ topic_url | prepend: site.url }}" class="tag is-filled brand-fill">
+                {{ topic.title }}
+            </a>
+            <h3 class="m-0">
+                <a href="{{ post.url | prepend: site.url }}" class="d-blk smalltext richblack-link py-h">
+                    {{ post.title }}
+                </a>
+            </h3>
+            <div class="nanotext ff-sans-serif">
+                <span class="co-sweetgray">
+                    {{ post.date | date: '%b %d, %Y' }}, 
+                </span>
+                {% assign researcher_url = post.researcher_shortname | prepend: '/researchers/' | append: '/' %}
+                {% assign researcher = site.researchers | where: 'url', researcher_url | first %}
+                <a href="{{ researcher_url | prepend: site.url }}">
+                    {{ researcher.title }}
+                </a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

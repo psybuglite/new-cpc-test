@@ -1,0 +1,33 @@
+// 
+    // Buttons
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.btn
+    display:                inline-flex
+    align-items:            center
+    font-family:            $headingfont
+    font-size:              $microfont
+    line-height:            0
+    border-radius:          4px
+    &.has-shadow
+        box-shadow:         inset 0 1px 8px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(255, 255, 255, 0.1), 0 -1px 0 rgba(0, 0, 0, 0.5)
+    &.btn-brand
+        background-color:   $primarycolor
+        color:              #fff
+    &.btn-red
+        background-color:   #ce2523
+        color:              #fff
+    &.btn-red:hover
+        background-color:   #8e2319
+    &.btn-default
+        background-color:   rgba(0, 0, 0, 0.2)
+    &.btn-white
+        background-color:   #fff
+    &.btn-white:hover
+        background-color:   $primarycolor
+        color:              #fff
+    &.btn-small
+        padding:            $space-xs $space-sm
+        padding-bottom:     $space-xs + 0.12rem

@@ -1,0 +1,95 @@
+// 
+    // Header
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.logo
+    width:                  90px
+.is-active
+    border-bottom:          3px solid white
+.desktopnav
+    background:             $primarycolor
+    a
+        color:              $platinum
+    li
+        background:         $primarycolor
+        font-size:          0.8rem
+    ul.sublist
+        top:                58px
+        z-index:            12
+    li.main-list
+        margin-right:       20px
+        li.sub-list-item:hover
+            background:     #004926
+        li.sub-list-item
+            opacity:        0
+            display:        none
+            transition:     all 0.3s
+            p
+                padding:    0.3rem 0.8rem
+                width:      100%
+                font-size:  0.8rem
+    li.main-list:hover li.sub-list-item
+        opacity:            1
+        display:            block
+.menu-icon
+    display:                none
+.overlay
+    height: 100%
+    width: 0
+    position: fixed
+    z-index: 1000
+    top: 0
+    left: 0
+    background-color: rgb(255, 255, 255)
+    background-color: rgba(255, 255, 255, 1)
+    overflow-x: hidden
+    transition: 0.5s
+
+.overlay-content
+    position: relative
+    top: 10%
+    width: 100%
+    text-align: center
+    margin-top: 30px
+
+.overlay
+    a
+        padding: 8px
+        text-decoration: none
+        font-size: 26px
+        color: $primarycolor
+        display: block
+        transition: 0.3s
+        &:hover, &:focus
+            color: black
+    .closebtn
+        position: absolute
+        top: 20px
+        right: 45px
+        font-size: 30px
+@media screen and (max-width: 820px)
+    nav.desktopnav
+        display:            none
+    .menu-icon
+        display:            block
+    .top-nav
+        box-shadow: $subtleboxshadow
+@media screen and (max-width: 650px)
+    .site-title
+        display:            none
+    .logo
+        width:              70px
+        height:             50px
+@media screen and (max-height: 450px)
+    .overlay
+        a
+            font-size: 20px
+        .closebtn
+            font-size: 40px
+            top: 15px
+            right: 35px
+@media screen and (max-width: 410px)
+    .btn.btn-white
+        display:            none

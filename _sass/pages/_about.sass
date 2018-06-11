@@ -1,0 +1,44 @@
+// 
+    // Aboutpage
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+.image-description, .workspace
+    margin-top:                 -10.2rem
+    img
+        height:                 392px
+        @media #{ $smallup }
+            height:             576px
+
+.our-team
+    .team-list
+        @extend .grid
+        grid-gap:               $space-sm
+    .team-list-item
+        grid-column:            1 / 13
+        margin-bottom:          $space-sm
+        &:last-of-type
+            margin-bottom:      0
+        img
+            width:              232px
+            height:             352px
+        @media #{ $smallup }
+            display:            flex
+            .team-list-item-detail
+                margin-left:    $space-md
+
+.workspace
+    margin-top:                 unset
+
+.about-header
+    position:               relative
+    border-radius:          0
+
+    @media #{ $largeup }
+        position:           absolute
+        top:                30%
+        left:               0
+        width:              35%
+        border-top-right-radius: 10px
+        border-bottom-right-radius: 10px

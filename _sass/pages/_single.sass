@@ -1,0 +1,27 @@
+// 
+    // Single pages
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+[content]
+    h2, h3
+        &:first-of-type
+            margin-top:         0
+    figure
+        margin:                 0
+        margin-top:             $space-md
+        margin-bottom:          $space-md
+        &:not(.video-wrapper)
+            margin:             $space-md calc(50% - 50vw)
+            @media #{ $mediumup }
+                margin:         $space-md calc(50% - 45vw)
+            @media #{ $largeup }
+                margin:         $space-md calc(50% - 40vw)
+            @media #{ $slaptop }
+                margin:         $space-md calc(50% - 37vw)
+        figcaption
+            background-color:   #fff
+            padding:            $space
+            font-size:          $microfont
+            font-style:         italic

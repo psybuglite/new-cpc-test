@@ -1,0 +1,196 @@
+---
+layout: default
+---
+
+<section class=" maxwidth-sl mx-auto top-heading">
+    <div class="wrapper">
+        {% include lists/breadcrumbs.html %}
+        <h2>{{ page.title }}</h2>
+    </div>
+</section>
+<section class="maxwidth-sl mx-auto sub-container">
+    <div class="wrapper">
+        {% if page.main %}
+            <div class="py-1">
+                {{ page.main | markdownify | flatify }}
+            </div>
+        {% endif %}
+        {% if page.grid == true %}
+            {% if page.title == "Departments & Units" %}
+                <div class="grid is-multi-col py-1 mostly-3">
+                    {% for item in site.departments %}
+                        <a href="{{ item.permalink | prepend: site.url }}">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.title == "Sitemap" %}
+                <div class="grid is-multi-col py-1 mostly-4">
+                    <div>
+                        <h3>People</h3>
+                        <ul class="none">
+                            {% assign sorted = site.people | sort: 'rank' %}
+                            {% for person in sorted %}
+                                <li class="my-1">
+                                    <a href="{{ person.url | prepend: site.url }}">{{ person.designation }}</a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="smalltext">Departments</h3>
+                        {% for item in site.departments %}
+                            <ul class="none">
+                                <li class="my-1">
+                                    <a href="{{ item.permalink | prepend: site.url }}">{{ item.title }}</a>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                    </div>
+                    {% for item in site.mainnav %}
+                        {% if item.pages[0] %}
+                            <div>
+                                <h3 class="smalltext">{{ item.section }}</h3>
+                                <ul class="none">
+                                    {% for entry in item.pages %}
+                                        <li class="my-1">
+                                            <a href="{{ entry.url | prepend: site.url }}">
+                                                {{ entry.page }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.title == "News and Events" %}
+                <div class="grid is-multi-col py-1 mostly-3">
+                    {% for item in site.mainnav %}
+                        {% if item.url == "/news-events/"  %}
+                        {% for link in item.pages %}
+                        <a href="{{ link.url | prepend: site.url }}">{{ link.page }}</a>
+                        {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.title == "Consumers" %}
+                <div class="grid is-multi-col py-2 mostly-3">
+                    {% for item in site.consumers %}
+                        <a href="{{ item.permalink | prepend: site.url }}">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+                <div class="d-flx al-i-c py-1">
+                        <h3 class="m-0 prefix is-even-wider">From the Consumer Blog</h3>
+                        <span class="suffix microtext prefix">View More {% include tools/icons.html icon="chevron-right" %}</span>
+                </div>
+                <div class="grid is-multi-col py-2 mostly-2">
+                    {% for post in site.blog limit: 6 %}
+                        {% if post.image %}
+                            <a class="no-decor" href="{{ post.url | prepend: site.url }}">
+                                <div class="d-flx fw-w">
+                                    <img src="{{ post.image | prepend: site.url }}" class="left-50-persisted prefix is-wider blog-image" alt="">
+                                    <div class="microtext smalllh co-readablegray">
+                                        <h3 class="m-0 no-decor smalltext">{{ post.title | truncatewords: 8 }}</h3>
+                                        <p>
+                                            {{ post.content | truncatewords: 20 }}
+                                        </p>
+                                        <span class="prefix microtext co-primary">Read More {% include tools/icons.html icon="chevron-right" %}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.title == "Businesses" %}
+                <div class="grid is-multi-col py-1 mostly-3">
+                    {% for item in site.businesses %}
+                        <a href="{{ item.permalink | prepend: site.url }}">{{ item.title }}</a>
+                    {% endfor %}
+                    <a href="{{ site.url }}/businesses/documents">Relevant Documents</a>
+                </div>
+
+            {% endif %}
+            {% if page.title == "Non-Governmental Organisations (NGOs)" %}
+                <div class="grid is-multi-col py-1 mostly-3">
+                    {% for item in site.ngos %}
+                        <a href="{{ item.permalink | prepend: site.url }}">{{ item.title }}</a>
+                    {% endfor %}
+                        <a href="{{ site.url }}/ngos/documents">Relevant Documents</a>
+                </div>
+            {% endif %}
+            {% if page.title == "Publications" %}
+                <div class="grid is-multi-col py-1 mostly-3">
+                    {% for item in site.publications %}
+                        <a href="{{ item.permalink | prepend: site.url }}">{{ item.title }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.title == "Testimonials" %}
+                <div class="grid is-multi-col py-1 mostly-2">
+                    {% for item in site.testimonials %}
+                        <div>
+                            <h4>{{ item.name }}</h4>
+                            <p>{{ item.text }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if page.title == "Contact" %}
+            <div class="py-1">
+                <div class="grid is-multi-col mostly-2">
+                    <div>
+                        <h3>CONSUMER PROTECTION COUNCIL HEADQUARTERS (CPCHQ)</h3>
+                        <p><strong>Director General: {{ site.headquarters.head }}</strong></p>
+                        <p>{{ site.headquarters.address }}</p>
+                        <p>Phone: {{ site.headquarters.phone }}</p>
+                        <a href="mailto:{{ site.headquarters.email }}">{{ site.headquarters.email }}</a>
+                    </div>
+                    <img src="{{ page.image }}" alt="">
+                </div>
+                <div class="grid is-multi-col mostly-2">
+                    {% for item in page.List %}
+                        <div>
+                            <h3>{{ item.office }}</h3>
+                            <hr>
+                            <p><strong>{{ item.officer }}</strong></p>
+                            <p>Address: {{ item.address }}</p>
+                            <p>Contact: <a href="tel:{{ item.contact }}">{{ item.contact }}</a></p>
+                            <p>Email: <a href="mailto:{{ item.email }}">{{ item.email }}</a></p>
+                        </div>
+                       
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        {% else %}
+            <ul class="none pb-1">
+                {% for item in page.List %}
+                    <li>
+                        <h3>{{ item.title }}</h3>
+                        <p>
+                            {{ item.body | markdownify }}
+                        </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <div class="pb-1">
+            {{ content }}
+        </div>
+    </div>
+</section>
+
+
+{% if page.document %}
+    {% for file in page.document %}
+    <div class="maxwidth-sl mx-auto clearfix">
+        <section class="wrapper">
+            <a href="{{ file.file | prepend: site.url }}" download><button class=" btn btn-brand p-1 border prefix smalltext">{{ file.name }}</button>{% include tools/icons.html icon="download" %}</a>
+        </section>
+    </div>
+    {% endfor %}
+{% endif %}

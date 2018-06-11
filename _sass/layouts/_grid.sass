@@ -1,0 +1,54 @@
+// 
+    // Grid
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+// Widths
+.width-100-pc
+    width:              100%
+.maxwidth-xl
+    max-width:          $maxwidth-xl
+.maxwidth-lt
+    max-width:          $maxwidth-lt
+.maxwidth-tb
+    max-width:          $maxwidth-tb
+.maxwidth-sm
+    max-width:          $maxwidth-sm
+.maxwidth-xs
+    max-width:          $maxwidth-xs
+.maxwidth-sl
+    max-width:          $maxwidth-sl
+
+
+// The Grid
+.grid
+    display:                        grid
+    grid-template-columns:          repeat(12, 1fr)
+    grid-gap:                       $space-sm
+    &.is-multi-col.mostly-2
+        grid-template-columns:      repeat(auto-fill, minmax(280px, 1fr))
+        @media #{ $largeup }
+            grid-template-columns:  repeat(auto-fill, minmax(372px, 1fr))
+    &.is-multi-col.mostly-3
+        grid-template-columns:      repeat(auto-fill, minmax(310px, 1fr))
+    &.is-multi-col.mostly-4
+        grid-template-columns:      repeat(auto-fill, minmax(224px, 1fr))
+    .col-12
+        grid-column:                1 / 13
+    @media #{ $smallup }
+        .col-6-sm
+            grid-column:            1 / 7
+            &.offset-6-cols-from-left
+                grid-column:        7 /13
+    @media #{ $mediumup }
+        .col-4-md
+            grid-column:            1 / 9
+            &.offset-8-cols-from-left
+                grid-column:        9 /13
+        .col-8-md
+            grid-column:            1 / 9
+        .col-9-md
+            grid-column:            1 / 10
+            &.offset-9-cols-from-left
+                grid-column:        10 /13

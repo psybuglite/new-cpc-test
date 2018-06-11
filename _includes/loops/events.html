@@ -1,0 +1,14 @@
+{% assign events = paginator.posts | where: 'is_events', 'true' %}
+{% assign postsByMonth = events | group_by_exp: "post", "post.date | date: '%b - %Y'" %}
+{% for month in postsByMonth %}
+    <div class="post-group">
+        <h2 class="small-caps co-sweetgray m-0 pb-h archive-month">
+            {{ month.name }}
+        </h2>
+        <ul class="none">
+            {% for post in month.items %}
+                {% include lists/posts-list.html %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endfor %}

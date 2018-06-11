@@ -1,0 +1,42 @@
+// 
+    // Sections
+
+    // @package hdy
+    // @author  Kabolobari Benakole <i@kb.life>
+
+//
+.sub-container
+    a
+        text-decoration:    underline
+.top-heading
+    h2
+        position:               relative
+        padding-bottom:         2rem
+    h2::before
+        content:                ""
+        width:                  40%
+        height:                 3px
+        position:               absolute
+        top:                    80%
+        left:                   0
+        background:             $primarycolor
+    h2::after
+        content:                ""
+        width:                  10%
+        height:                 3px
+        position:               absolute
+        top:                    80%
+        left:                   40%
+        background:             #ddd
+
+.feature-image
+    height:                 300px
+    width:                  100%
+    object-fit:             cover
+    @media #{$mediumup}
+        height:                 600px
+        width:                  100%
+        object-fit:             cover
+
+.blog-image
+    height:                 250px

@@ -1,0 +1,46 @@
+{% assign events = site.events | sort: 'event_number' %}
+{% unless events.size == 0 %}
+    <div>
+        <a href="{{ site.url }}/news-events/events" class="d-flx al-i-c j-c-sb archive-month pb-h">
+            <h3 class="micro-caps co-sweetgray m-0">
+                Latest Events
+            </h3>
+            <span class="d-flx al-i-c lh-0 sweetgray-link">
+                <span class="prefix">All events</span>
+                {% include tools/icons.html icon="chevron-right" %}
+            </span>
+        </a>
+        <ul class="none">
+            {% for post in events limit: 1 %}
+                {% include lists/posts-list.html %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endunless %}
+{% assign alerts = site.alerts %}
+{% if alerts %}
+    <div>
+        <a href="{{ site.url }}/news-events/alerts" class="d-flx al-i-c j-c-sb archive-month pb-h">
+            <h3 class="micro-caps co-sweetgray m-0">
+                Alerts
+            </h3>
+            <span class="d-flx al-i-c lh-0 sweetgray-link">
+                <span class="prefix">See all</span>
+                {% include tools/icons.html icon="chevron-right" %}
+            </span>
+        </a>
+        <ul class="none">
+            {% for post in alerts limit: 2 %}
+                {% include lists/posts-list.html %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+<div>
+    <h3 class="micro-caps co-sweetgray m-0 archive-month pb-h">
+        Media Contact
+    </h3>
+    <p class="m-0 pt-1">
+        <a href="mailto:">contact@cpc.gov.ng</a>
+    </p>
+</div>

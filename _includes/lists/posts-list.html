@@ -1,0 +1,31 @@
+<li class="article-link {% if post.image %}has-featured-image{% endif %}">
+    <a href="{{ post.url | prepend: site.url }}" class="richblack-link clearfix">
+        <div {% if post.image %}class="left-70-persisted pr-1"{% endif %}>
+            <h3 class="microtext m-0">
+                {{ post.title }}
+            </h3>
+            {% if post.event_date %}
+                <!-- <span class="nano-caps ff-sans-serif co-sweetgray events-date d-ibl pos-rel mt-1">
+                    <span class="absolute-middle tx-c">
+                        <span class="d-blk">{{ post.event_date | date: '%b' }}</span>
+                        <span>{{ post.event_date | date: '%d' }}</span>
+                    </span>
+                </span> -->
+            {% elsif post.date %}
+                <span class="nanotext co-sweetgray d-blk pt-hh">
+                    {{ post.date | date: "%b %d" }}
+                </span>
+            {% else %}
+
+            {% endif %}
+        </div>
+        {% if post.image %}
+            <figure class="right-30-persisted m-0">
+                <img src="{{ post.image | prepend: site.url }}" alt="{{ post.image_description }}" class="featured-image">
+                <figcaption>
+                    {{ post.image_description }}
+                </figcaption>
+            </figure>
+        {% endif %}
+    </a>
+</li>

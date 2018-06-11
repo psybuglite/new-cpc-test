@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<div class="maxwidth-sl mx-auto clearfix">
+    <section class="wrapper">
+        {% include lists/breadcrumbs.html %}
+    </section>
+</div>
+
+<div class="maxwidth-sl mx-auto pb-2 clearfix">
+    <section class="wrapper">
+        <div class="left-40 mb-1">
+            <figure class="m-1">
+                <img src="{{ page.image | prepend: site.url }}" alt="{{ person.title }}">
+            </figure>
+            <figcaption class="tx-c">
+                <h3 class="pt-h m-0">{{ page.title }}</h3>
+                <span>
+                    {{ page.designation }}
+                </span>
+            </figcaption>
+        </div>
+        <div>
+            {{ content }}
+        </div>
+    </section>
+</div>

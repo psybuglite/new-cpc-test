@@ -1,0 +1,129 @@
+<footer class="main-footer nanotext co-platinum bg-primary">
+    <div class="maxwidth-sl mx-auto">
+        <div class="wrapper">
+            <h2 class="sr">Give the footer a heading</h2>
+            <div class="container mx-auto grid">
+                <div class="col-12 col-9-md">
+                    <nav class="grid is-multi-col mostly-4">
+                        {% for item in site.mainnav %}
+                            {% if item.pages[0] %}
+                                <div>
+                                    <h3 class="co-white smalltext">{{ item.section }}</h3>
+                                    <ul class="none">
+                                        {% for entry in item.pages %}
+                                            <li>
+                                                <a class="co-gainsboro" href="{{ entry.url | prepend: site.url }}">
+                                                    {{ entry.page }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </nav>
+                </div>
+                <div class="col-12 col-9-md offset-9-cols-from-left">
+                    <div>
+                        <h3 class="co-white smalltext">
+                            {{ site.headquarters.title }}
+                        </h3>
+                        <p class="co-gainsboro">
+                            <span class="co-white">Address:</span>
+                            <span>{{ site.headquarters.address }}</span>
+                        </p>
+                        <p class="co-white">
+                            <span class="co-white">Phone:</span>
+                            <span class="co-white">{{ site.headquarters.phone }}</span>
+                        </p>
+                        <p class="co-white">
+                            <span class="co-white">Email:</span>
+                            <span>
+                                <a class="co-white" href="mailto:{{ site.headquarters.email }}">
+                                    {{ site.headquarters.email }}
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+                    <div>
+                        {% for item in site.social_media %}
+                        <h3 class="co-white smalltext">
+                            {{ item.title }}
+                        </h3>
+                        <ul class="none d-flx">
+                            {% for entry in item.subpages %}
+                                <li class="prefix is-even-wider">
+                                    <a href="//{{ entry.name | downcase }}.com/{{ entry.link }}" target="_blank">
+                                        {% case entry.name %}
+                                            {% when 'Facebook' %}
+                                                {% include tools/icons.html icon="facebook" %}
+                                            {% when 'Twitter' %}
+                                                {% include tools/icons.html icon="twitter" %}
+                                            {% when 'Instagram' %}
+                                                {% include tools/icons.html icon="instagram" %}
+                                        {% endcase %}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                    </div>
+                    <div>
+                        {% for item in site.apps %}
+                        <h3 class="co-white smalltext">
+                            {{ item.title }}
+                        </h3>
+                        <ul class="none">
+                            {% for entry in item.subpages %}
+                                <li class="prefix mb-1 d-ibl">
+                                    <a class="d-blk" href="{{ entry.link }}" target="_blank">
+                                        {% case entry.name %}
+                                        {% when 'Android' %}
+                                            {% include tools/icons.html icon="google" %}
+                                        {% when 'iOS' %}
+                                            {% include tools/icons.html icon="apple" %}
+                                        {% endcase %}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                    </div>
+                </div>
+                <div class="col-12 bod-top pt-2 pb-1">
+                    <div class="pb-1 co-gainsboro">
+                        <p>This is the official website of the Consumer Protection Council (CPC)</p>
+                    </div>
+                    <div class="last-footer d-flx fw-w al-i-c">
+                        <p class="m-0 co-white"><strong><a class="co-white" href="{{ site.url }}/copyright">Copyright</a> &copy; <span class="year"></span> Consumer Protection Council</strong></p>
+                        <ul class="d-flx none m-0 a-i-c">
+                            {% for item in site.legal %}
+                                {% for entry in item.subpages %}
+                                    <li class="suffix is-even-wider">
+                                        <a class="m-0 co-white" href="{{ entry.url }}">{{ entry.name }}</a>
+                                    </li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div> 
+    
+</footer>
+
+
+<script>
+
+    var now = new Date();
+    var options = {
+        year: 'numeric'
+    };
+
+    var date = now.toLocaleString('en-us', options);
+    var year = document.querySelector(".year");
+
+    year.innerHTML = date;
+
+</script>

@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="maxwidth-sl mx-auto clearfix">
+    <section class="left-70 wrapper">
+        <div>
+            <h3>{{ page.title }}</h3>
+            {% if page.act %}
+                <p class="py-h tx-c">
+                    {{ page.act }}
+                </p>
+            {% endif %}
+        </div>
+        {% if page.image %}
+            <img src="{{ page.image }}" alt="" class="featured-image py-1">
+        {% endif %}
+        {% if page.caption %}
+            <p class="pb-2">
+                <em class="smalllh nanotext">{{ page.caption }}</em>
+            </p>
+        {% endif %}
+        <div class="py-h smalltext co-primary">
+            Posted: {{ page.date | date: "%A, %B %d, %Y" }}
+        </div>
+
+        <div class="py-2" data-content>
+            {{ content }}
+        </div>
+                
+    </section>
+    <aside class="right-30 sidebar wrapper">
+        {% include components/sidebar.html %}
+    </aside>
+</div>
+
+{% if page.downloadable_file %}
+    <div class="maxwidth-sl mx-auto clearfix">
+        <section class="wrapper">
+            <h4><a class="uline" href="{{ page.downloadable_file | prepend: site.url }}" download>Download this article</a></h4>
+        </section>
+    </div>
+{% endif %}
+
+
+<script>
+    var contentImages = document.querySelectorAll('[data-content] p img')
+    if (contentImages) {
+            contentImages.forEach((element, i) => {  
+                let parentImg    = element.closest('p'),
+                    figure       = document.createElement('figure')
+                figure.innerHTML = `
+                    <img src="${element.src}" alt="${element.alt}" class="spaced-image">
+                    <figcaption><em>${element.alt}</em></figcaption>
+                `
+                parentImg.parentNode.replaceChild(figure, parentImg)
+            })
+        }
+</script>

@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="maxwidth-sl mx-auto clearfix">
+    <section class="wrapper">
+        {% include lists/breadcrumbs.html %}
+    </section>
+</div>
+
+<div class="maxwidth-sl mx-auto">
+    <section class="wrapper">
+        <ul class="none pb-2 grid is-multi-col mostly-4">
+            {% assign sorted = site.people | sort: 'rank' %}
+            {% for person in sorted %}
+                <li class="pos-rel">
+                    <a href="{{ person.url | prepend: site.url }}">
+                        <figure class="m-0 people">
+                            <img src="{{ person.image | prepend: site.url }}" alt="{{ person.title }}">
+                            <figcaption class="pos-abs tx-c p-h">
+                                <h3 class="nanotext m-0 co-white">{{ person.title }}</h3>
+                                <span class="smalllh picotext ff-b co-white">
+                                    {{ person.designation }}
+                                </span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
