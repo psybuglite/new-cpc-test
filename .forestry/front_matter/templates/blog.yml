@@ -1,0 +1,24 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/:collection/:year/:month/:day/:title/"
+- name: image
+  label: Image
+  type: text
+  hidden: false
+  default: 
+- name: is_blog
+  label: Is blog
+  type: boolean
+  hidden: false
+  default: true
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: news-single

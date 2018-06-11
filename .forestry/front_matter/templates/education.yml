@@ -1,0 +1,39 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: image
+  label: Image
+  type: file
+  hidden: false
+  default: ''
+- name: dimensions
+  label: Dimensions
+  type: text
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/:collection/:title/"
+- name: is_gallery
+  label: Is gallery
+  type: boolean
+  hidden: false
+  default: true
+pages:
+- _education/education-0.md
+- _education/education-0.3.md
+- _education/education-0.2.md
+- _education/education-0.1.md

@@ -1,0 +1,48 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- name: title
+  label: Title
+  type: textarea
+  hidden: false
+  default: ''
+- name: date
+  label: Date
+  type: datetime
+  hidden: false
+  default: ''
+- name: act
+  label: Act
+  type: text
+  hidden: false
+  default: ''
+- name: downloadable_file
+  label: Downloadable file
+  type: text
+  hidden: false
+  default: ''
+- name: permalink
+  label: Permalink
+  type: text
+  hidden: false
+  default: "/news-events/:collection/:year/:month/:day/:title/"
+- name: image
+  label: Image
+  type: text
+  hidden: false
+  default: 
+- name: is_alerts
+  label: Is alerts
+  type: boolean
+  hidden: false
+  default: true
+- name: layout
+  label: Layout
+  type: text
+  hidden: false
+  default: news-single
+pages:
+- _alerts/2018/04/2018-04-10-Public-Service-Warning-on-Codeine.md
+- _alerts/2018/04/2018-04-30-Blue-Band.md
+- _alerts/2018/03/2018-03-19-Ford-Vehicle-Recall.md
