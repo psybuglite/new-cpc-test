@@ -19,5 +19,4 @@ fields:
   config:
     required: true
 pages:
-- _testimonials/tonye-testimony.md
 - _testimonials/fisayo-testimonial.md
