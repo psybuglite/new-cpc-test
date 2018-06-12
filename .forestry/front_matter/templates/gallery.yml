@@ -33,6 +33,14 @@ fields:
   hidden: false
   default: true
 pages:
+- _gallery/strategic-01.md
+- _gallery/round-table.md
+- _gallery/round-table.2.md
+- _gallery/lagos-rally-01.md
+- _gallery/lagos-quality-01.md
+- _gallery/edo.1.md
+- _gallery/bill.1.md
+- _gallery/abuja-01.1.md
 - _gallery/zaria.md
 - _gallery/zaria.2.md
 - _gallery/zaria.1.md
@@ -48,16 +56,11 @@ pages:
 - _gallery/town-hall-01.md
 - _gallery/strategic-03.md
 - _gallery/strategic-02.md
-- _gallery/strategic-01.md
-- _gallery/round-table.md
-- _gallery/round-table.2.md
 - _gallery/round-table.1.md
 - _gallery/nma.md
 - _gallery/nma.1.md
 - _gallery/lagos-rally-02.md
-- _gallery/lagos-rally-01.md
 - _gallery/lagos-quality-02.md
-- _gallery/lagos-quality-01.md
 - _gallery/kaduna.md
 - _gallery/frsc.md
 - _gallery/frsc.1.md
@@ -66,13 +69,10 @@ pages:
 - _gallery/engage.1.md
 - _gallery/edo.md
 - _gallery/edo.2.md
-- _gallery/edo.1.md
 - _gallery/coca-cola.md
 - _gallery/bill.md
 - _gallery/bill.3.md
 - _gallery/bill.2.md
-- _gallery/bill.1.md
 - _gallery/abuja-01.md
 - _gallery/abuja-01.3.md
 - _gallery/abuja-01.2.md
-- _gallery/abuja-01.1.md
