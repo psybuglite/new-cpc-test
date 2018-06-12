@@ -1,0 +1,20 @@
+---
+hide_body: false
+is_partial: false
+fields:
+- type: datetime
+  hidden: false
+  label: DATE
+  name: DATE
+  config:
+    required: false
+- type: text
+  label: Name
+  name: name
+  config:
+    required: true
+- type: text
+  name: text
+  label: text
+  config:
+    required: true
