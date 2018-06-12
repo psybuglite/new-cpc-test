@@ -63,7 +63,6 @@ fields:
   hidden: false
   default: news-single
 pages:
-- _testimonials/fisayo-testimonial.md
 - _events/2018/bill-of-rights.md
 - _events/2018/abuja-storm.md
 - _events/2018/meeting-in-townhall.md
