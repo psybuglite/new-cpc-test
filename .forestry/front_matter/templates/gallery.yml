@@ -33,14 +33,20 @@ fields:
   hidden: false
   default: true
 pages:
-- _gallery/strategic-01.md
+- _gallery/unilag-01.md
+- _gallery/unilag-01.2.md
+- _gallery/unilag-01.1.md
+- _gallery/town-hall-02.md
+- _gallery/town-hall-01.md
+- _gallery/strategic-03.md
 - _gallery/round-table.md
 - _gallery/round-table.2.md
+- _gallery/abuja-01.1.md
+- _gallery/strategic-01.md
 - _gallery/lagos-rally-01.md
 - _gallery/lagos-quality-01.md
 - _gallery/edo.1.md
 - _gallery/bill.1.md
-- _gallery/abuja-01.1.md
 - _gallery/zaria.md
 - _gallery/zaria.2.md
 - _gallery/zaria.1.md
@@ -48,13 +54,7 @@ pages:
 - _gallery/us-03.md
 - _gallery/us-02.md
 - _gallery/us-01.md
-- _gallery/unilag-01.md
-- _gallery/unilag-01.2.md
-- _gallery/unilag-01.1.md
 - _gallery/town-hall-03.md
-- _gallery/town-hall-02.md
-- _gallery/town-hall-01.md
-- _gallery/strategic-03.md
 - _gallery/strategic-02.md
 - _gallery/round-table.1.md
 - _gallery/nma.md
