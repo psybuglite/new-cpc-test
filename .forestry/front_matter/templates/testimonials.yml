@@ -18,3 +18,5 @@ fields:
   label: text
   config:
     required: true
+pages:
+- _testimonials/fisayo-testimonial.md
