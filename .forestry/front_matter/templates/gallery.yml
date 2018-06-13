@@ -33,6 +33,7 @@ fields:
   hidden: false
   default: true
 pages:
+- _gallery/fisayo-testimonial.md
 - _gallery/unilag-01.1.md
 - _gallery/engage.2.md
 - _gallery/coca-cola.md
