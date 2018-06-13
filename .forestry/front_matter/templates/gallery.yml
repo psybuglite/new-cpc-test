@@ -33,9 +33,11 @@ fields:
   hidden: false
   default: true
 pages:
+- _gallery/unilag-01.1.md
+- _gallery/engage.2.md
+- _gallery/coca-cola.md
 - _gallery/unilag-01.md
 - _gallery/unilag-01.2.md
-- _gallery/unilag-01.1.md
 - _gallery/town-hall-02.md
 - _gallery/town-hall-01.md
 - _gallery/strategic-03.md
@@ -65,11 +67,9 @@ pages:
 - _gallery/frsc.md
 - _gallery/frsc.1.md
 - _gallery/engage.md
-- _gallery/engage.2.md
 - _gallery/engage.1.md
 - _gallery/edo.md
 - _gallery/edo.2.md
-- _gallery/coca-cola.md
 - _gallery/bill.md
 - _gallery/bill.3.md
 - _gallery/bill.2.md
