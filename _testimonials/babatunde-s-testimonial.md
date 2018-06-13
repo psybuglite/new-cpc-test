@@ -6,5 +6,4 @@ name: Mr. Babatunde Asani
 text: I say a very big thank you for your intervention in my matter. The real estate
   company refunded me the three million, four hundred thousand naira (N3,400,000)
   which I paid for the house.
-published: false
 ---
