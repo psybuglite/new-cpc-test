@@ -5,7 +5,7 @@ act: Pursuant to Sections 2(c), (e), and (j), Consumer Protection Council Act 20
 downloadable_file: "/uploads/releases/codeine.png"
 image: ''
 is_alerts: false
-layout: page
+layout: ''
 ---
 Codeine is an opiate, and one of many in the opioids family. It is therefore classified as a narcotic substance, although not an illegal drug. Codeine is largely used as a pain reliever and cough suppressant. As such, it is an active ingredient in some expectorants or cough syrups.
 
