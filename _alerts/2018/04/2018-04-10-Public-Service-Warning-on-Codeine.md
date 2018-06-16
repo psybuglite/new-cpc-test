@@ -1,8 +1,11 @@
 ---
 title: Public Service Warning Regarding Consumption of Medication Containing Codeine
-date: 2018-04-10
+date: 2018-04-10 00:00:00 +0000
 act: Pursuant to Sections 2(c), (e), and (j), Consumer Protection Council Act 2004
-downloadable_file: /uploads/releases/codeine.png
+downloadable_file: "/uploads/releases/codeine.png"
+image: ''
+is_alerts: false
+layout: page
 ---
 Codeine is an opiate, and one of many in the opioids family. It is therefore classified as a narcotic substance, although not an illegal drug. Codeine is largely used as a pain reliever and cough suppressant. As such, it is an active ingredient in some expectorants or cough syrups.
 

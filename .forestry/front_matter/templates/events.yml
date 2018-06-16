@@ -64,12 +64,12 @@ fields:
   default: news-single
 pages:
 - _events/2018/bill-of-rights.md
-- _events/2018/abuja-storm.md
 - _events/2018/meeting-in-townhall.md
-- _events/2018/online-marketing.md
-- _events/2018/kaduna.md
 - _events/2018/frsc.md
 - _events/2018/nafdac.md
 - _events/2018/campaign-for-quality.md
+- _events/2018/online-marketing.md
+- _events/2018/kaduna.md
+- _events/2018/abuja-storm.md
 - _events/2018/media-engagement.md
 - _events/2018/control-for tobacco.md

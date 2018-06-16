@@ -33,7 +33,7 @@ fields:
   hidden: false
   default: true
 pages:
-- _education/education-0.md
+- _education/education-0.1.md
 - _education/education-0.3.md
 - _education/education-0.2.md
-- _education/education-0.1.md
+- _education/education-0.md

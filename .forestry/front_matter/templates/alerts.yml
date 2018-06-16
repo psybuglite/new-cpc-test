@@ -43,6 +43,6 @@ fields:
   hidden: false
   default: news-single
 pages:
-- _alerts/2018/04/2018-04-10-Public-Service-Warning-on-Codeine.md
 - _alerts/2018/04/2018-04-30-Blue-Band.md
 - _alerts/2018/03/2018-03-19-Ford-Vehicle-Recall.md
+- _alerts/2018/04/2018-04-10-Public-Service-Warning-on-Codeine.md
