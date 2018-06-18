@@ -33,6 +33,7 @@ fields:
   hidden: false
   default: true
 pages:
+- _gallery/bill.3.md
 - _gallery/lagos-rally-01.md
 - _gallery/lagos-quality-01.md
 - _gallery/zaria.md
@@ -46,7 +47,6 @@ pages:
 - _gallery/edo.md
 - _gallery/edo.2.md
 - _gallery/engage.md
-- _gallery/bill.3.md
 - _gallery/abuja-01.md
 - _gallery/abuja-01.3.md
 - _gallery/abuja-01.2.md
