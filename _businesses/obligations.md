@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: page
 title: Business Obligations
 permalink: "/businesses/obligations/"
 main: |-
